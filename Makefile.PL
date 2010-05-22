@@ -1,20 +1,17 @@
-use inc::Module::Install 0.77;
+use inc::Module::Install;
 
-if ( -e 'MANIFEST.SKIP' ) {
-    system( 'pod2text lib/Markup/Unified.pm > README' );
-}
+name		'Markup-Unified';
+all_from	'lib/Markup/Unified.pm';
 
-perl_version '5.008';
+# required modules
+requires	'Class::Accessor' => '0.34';
+requires	'Module::Load::Conditional' => '0.38';
+test_requires	'Test::More';
 
-name 'Markup-Unified';
-all_from 'lib/Markup/Unified.pm';
+# recommended modules
+recommends	'Text::Textile' => '2.12';
+recommends	'Text::Markdown' => '1.0.25';
+recommends	'HTML::BBCode' => '2.06';
+recommends	'HTML::Truncate' => '0.20';
 
-requires 'Moose';
-requires 'Text::Textile' => 2.12;
-requires 'Text::Markdown' => '1.0.25';
-requires 'HTML::BBCode' => 2.06;
-
-test_requires 'Test::More';
-
-auto_install;
 WriteAll;

@@ -1,14 +1,14 @@
 ---
 abstract: 'A simple, unified interface for Textile, Markdown and BBCode.'
 author:
-  - 'Ido Perlmuter, C<< <ido at fc-bnei-yehuda.com> >>'
+  - 'Ido Perlmuter, C<< <ido at ido50.net> >>'
 build_requires:
   ExtUtils::MakeMaker: 6.42
   Test::More: 0
 configure_requires:
   ExtUtils::MakeMaker: 6.42
 distribution_type: module
-generated_by: 'Module::Install version 0.91'
+generated_by: 'Module::Install version 0.97'
 license: gpl
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
@@ -18,12 +18,14 @@ no_index:
   directory:
     - inc
     - t
-requires:
+recommends:
   HTML::BBCode: 2.06
-  Moose: 0
+  HTML::Truncate: 0.20
   Text::Markdown: 1.0.25
   Text::Textile: 2.12
-  perl: 5.8.0
+requires:
+  Class::Accessor: 0.34
+  Module::Load::Conditional: 0.38
 resources:
   license: http://opensource.org/licenses/gpl-license.php
-version: 0.01
+version: 0.02
