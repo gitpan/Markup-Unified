@@ -1,5 +1,10 @@
 Revision history for Markup-Unified
 
+0.03	2010-05-23, 10:30:00
+	- Added the on_space option to HTML::Truncate, so that words are
+	  are not cut-off when truncating
+	- Fixed some documentation typos and added some info
+
 0.02	2010-05-22, 20:15:00
 	- Switched from Moose to Class::Accessor for a smaller dependency chain
 	- Made all markup modules optional instead of required
