@@ -1,0 +1,42 @@
+This file contains message digests of all files listed in MANIFEST,
+signed via the Module::Signature module, version 0.69.
+
+To verify the content in this distribution, first make sure you have
+Module::Signature installed, then type:
+
+    % cpansign -v
+
+It will check each file's integrity, as well as the signature's
+validity.  If "==> Signature verified OK! <==" is not displayed,
+the distribution may already have been compromised, and you should
+not run its Makefile.PL or Build.PL.
+
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA256
+
+SHA1 65f28fc398f0ea670afb72eab8a349fe219c61fb Changes
+SHA1 a9a7680943de8be0dc36bf1c71b2a24ef09187a2 INSTALL
+SHA1 f2ebae60db0d028b89760d565eed3604aa57fa54 LICENSE
+SHA1 e494e38c288ce0d2fd91e4df8ebb4acd8a1192d3 MANIFEST
+SHA1 75015edbb25d3e0c97ab777c442a7b7db92dadae MANIFEST.SKIP
+SHA1 ed8cfd1d2e71484861cff46b269c1d23d0cb2c66 META.json
+SHA1 f508bc6d98f34c5809ea94c23058f2175d89c6a9 META.yml
+SHA1 5e13fe7c6a79fee7c70177f70b063ae8c8150571 Makefile.PL
+SHA1 0e853cb707393a5a7ee782f792caebf83627f9c5 README
+SHA1 d00fbfe9cf3b3b87444a344efc382d8b5c4a0aa3 dist.ini
+SHA1 2241fd3910673b1935707e3f554982f496b1ad8b lib/Markup/Unified.pm
+SHA1 39b4c1ce3ca25cfeffea852e01027a976cbd3070 t/00-load.t
+SHA1 2d7b766f1bcff45ccf62afe7054711ad8e696eba t/01-format_bbcode.t
+SHA1 6ea49f77e38afa2fc12448ae45fe1c02b2fe1e14 t/02-format_markdown.t
+SHA1 7d4261dbacfe68be50437a7f7d083c7e47df53b5 t/03-format_textile.t
+SHA1 0dcc973e269065d35155d1478e75b1508e71edf6 t/04-format_truncate.t
+SHA1 87768d177f8c2e2df9c591cde869e7c8a245555e t/release-dist-manifest.t
+SHA1 9433c240fe590bc404ab68ff63984df763e347ed t/release-pod-coverage.t
+SHA1 b30cbdfaf935017c4568c0c91b242438cb87786e t/release-pod-syntax.t
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v2.0.19 (GNU/Linux)
+
+iF4EAREIAAYFAlCugMcACgkQa4OHQAFM10eU5AEAqcr6EHGRbu4DzLgWNb6RM+Oz
+Y7N/gFDbxcfSHdV+ElQA/iL0L1IbhMFxXoXAmQq34uIya3HDZf2IrK+EHuEOZ6w7
+=EplE
+-----END PGP SIGNATURE-----

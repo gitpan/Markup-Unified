@@ -1,31 +1,25 @@
 ---
 abstract: 'A simple, unified interface for Textile, Markdown and BBCode.'
 author:
-  - 'Ido Perlmuter, C<< <ido at ido50.net> >>'
+  - 'Ido Perlmuter <ido@ido50.net>'
 build_requires:
-  ExtUtils::MakeMaker: 6.42
   Test::More: 0
 configure_requires:
-  ExtUtils::MakeMaker: 6.42
-distribution_type: module
-generated_by: 'Module::Install version 0.95'
-license: gpl
+  ExtUtils::MakeMaker: 6.30
+dynamic_config: 0
+generated_by: 'Dist::Zilla version 4.300028, CPAN::Meta::Converter version 2.120921'
+license: perl
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
   version: 1.4
 name: Markup-Unified
-no_index:
-  directory:
-    - inc
-    - t
-recommends:
-  HTML::BBCode: 2.06
-  HTML::Truncate: 0.20
-  Text::Markdown: 1.0.25
-  Text::Textile: 2.12
 requires:
-  Class::Accessor: 0.34
-  Module::Load::Conditional: 0.38
+  Module::Load::Conditional: 0
+  overload: 0
+  perl: 5.006
+  strict: 0
+  warnings: 0
 resources:
-  license: http://opensource.org/licenses/gpl-license.php
-version: 0.03
+  homepage: https://github.com/ido50/Markup-Unified
+  repository: https://github.com/ido50/Markup-Unified.git
+version: 0.04

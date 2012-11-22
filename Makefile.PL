@@ -1,17 +1,56 @@
-use inc::Module::Install;
 
-name		'Markup-Unified';
-all_from	'lib/Markup/Unified.pm';
+use strict;
+use warnings;
 
-# required modules
-requires	'Class::Accessor' => '0.34';
-requires	'Module::Load::Conditional' => '0.38';
-test_requires	'Test::More';
+use 5.006;
 
-# recommended modules
-recommends	'Text::Textile' => '2.12';
-recommends	'Text::Markdown' => '1.0.25';
-recommends	'HTML::BBCode' => '2.06';
-recommends	'HTML::Truncate' => '0.20';
+use ExtUtils::MakeMaker 6.30;
 
-WriteAll;
+
+
+my %WriteMakefileArgs = (
+  "ABSTRACT" => "A simple, unified interface for Textile, Markdown and BBCode.",
+  "AUTHOR" => "Ido Perlmuter <ido\@ido50.net>",
+  "BUILD_REQUIRES" => {
+    "Test::More" => 0
+  },
+  "CONFIGURE_REQUIRES" => {
+    "ExtUtils::MakeMaker" => "6.30"
+  },
+  "DISTNAME" => "Markup-Unified",
+  "EXE_FILES" => [],
+  "LICENSE" => "perl",
+  "NAME" => "Markup::Unified",
+  "PREREQ_PM" => {
+    "Module::Load::Conditional" => 0,
+    "overload" => 0,
+    "strict" => 0,
+    "warnings" => 0
+  },
+  "VERSION" => "0.04",
+  "test" => {
+    "TESTS" => "t/*.t"
+  }
+);
+
+
+unless ( eval { ExtUtils::MakeMaker->VERSION(6.56) } ) {
+  my $br = delete $WriteMakefileArgs{BUILD_REQUIRES};
+  my $pp = $WriteMakefileArgs{PREREQ_PM};
+  for my $mod ( keys %$br ) {
+    if ( exists $pp->{$mod} ) {
+      $pp->{$mod} = $br->{$mod} if $br->{$mod} > $pp->{$mod};
+    }
+    else {
+      $pp->{$mod} = $br->{$mod};
+    }
+  }
+}
+
+delete $WriteMakefileArgs{CONFIGURE_REQUIRES}
+  unless eval { ExtUtils::MakeMaker->VERSION(6.52) };
+
+WriteMakefile(%WriteMakefileArgs);
+
+
+
